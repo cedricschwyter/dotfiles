@@ -1,0 +1,13 @@
+[user]
+	email = cedricschwyter@bluewin.ch
+	name = Cedric Schwyter
+[credential]
+	helper = store
+[pull]
+    rebase = true
+[diff]
+    tool = vimdiff
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
