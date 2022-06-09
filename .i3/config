@@ -74,7 +74,7 @@ bindsym XF86AudioMute exec amixer -q sset Master toggle
 # Start Applications
 bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
 bindsym $mod+F2 exec vivaldi-stable
-bindsym $mod+Shift+F2 exec brave
+bindsym $mod+Shift+F2 exec qutebrowser
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec alacritty -e "iranger"
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
