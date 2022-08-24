@@ -815,3 +815,5 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
+
+:nnoremap <F8> :setl noai nocin nosi inde=<CR>
