@@ -321,7 +321,12 @@ let g:fzf_colors =
             \ 'header':  ['fg', 'Comment'] }
 
 " Autoformat
-au BufWrite * :Autoformat
+:nnoremap <F8> :let b:disable_autoformat=1<CR>
+:nnoremap <F9> :unlet b:disable_autoformat<CR>
+
+if !exists("b:disable_autoformat")
+    au BufWrite * :Autoformat
+endif
 
 "*****************************************************************************
 "" Abbreviations
@@ -816,5 +821,3 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
-
-:nnoremap <F8> :setl noai nocin nosi inde=<CR>
