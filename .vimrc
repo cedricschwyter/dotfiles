@@ -822,3 +822,6 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
+
+" linewrap in diff mode
+autocmd FilterWritePre * if &diff | setlocal wrap< | endif
