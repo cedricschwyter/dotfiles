@@ -824,4 +824,4 @@ else
 endif
 
 " linewrap in diff mode
-autocmd FilterWritePre * if &diff | setlocal wrap< | endif
+au VimEnter * if &diff | execute 'windo set wrap' | endif
