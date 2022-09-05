@@ -63,6 +63,7 @@ Plug 'thomasfaingnaert/vim-lsp-snippets'
 Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'hdiniz/vim-gradle'
 
 
 if isdirectory('/usr/local/opt/fzf')
