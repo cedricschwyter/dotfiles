@@ -824,4 +824,4 @@ else
 endif
 
 " linewrap in diff mode
-au VimEnter * if &diff | execute 'windo set wrap' | endif
+au FilterWritePre * execute 'windo set wrap'
