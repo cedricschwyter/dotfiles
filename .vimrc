@@ -321,13 +321,8 @@ let g:fzf_colors =
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
 
-" Autoformat
-:nnoremap <F8> :let b:disable_autoformat=1<CR>
-:nnoremap <F9> :unlet b:disable_autoformat<CR>
-
-if !exists("b:disable_autoformat")
-    au BufWrite * :Autoformat
-endif
+au BufWrite * :Autoformat
+autocmd FileType yaml let b:autoformat_autoindent=0
 
 "*****************************************************************************
 "" Abbreviations
@@ -433,7 +428,7 @@ noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
 noremap <Leader>gll :Gpull<CR>
 noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
@@ -554,7 +549,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+nnoremap <Leader>o :.GBrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
