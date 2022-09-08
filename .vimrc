@@ -322,6 +322,8 @@ let g:fzf_colors =
             \ 'header':  ['fg', 'Comment'] }
 
 au BufWrite * :Autoformat
+nnoremap <F8> :let b:autoformat_autoindent=0<CR>
+nnoremap <F9> :let b:autoformat_autoindent=1<CR>
 autocmd FileType yaml let b:autoformat_autoindent=0
 
 "*****************************************************************************
