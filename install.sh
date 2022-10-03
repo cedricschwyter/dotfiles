@@ -21,10 +21,7 @@ yes | cp -rf .bash_profile \
     .gitconfig \
     .oh-my-zsh \
     .tmux.conf \
-    .clone \
-    .vimrc \
     .zshrc \
-    .ctags \
     .i3 \
     .gdbinit \
     .alacritty.yml \
