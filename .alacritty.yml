@@ -10,6 +10,8 @@
 # to the user's home directory starting with `~/`.
 #import:
 #  - /path/to/alacritty.yml
+import:
+  - ~/.alacritty-colorscheme/themes/blood_moon.yaml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables

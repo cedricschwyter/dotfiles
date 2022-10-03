@@ -16,6 +16,7 @@ fi
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 mkdir -p $HOME/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/eendroroy/alacritty-theme.git ~/.alacritty-colorscheme
 yes | cp -rf .bash_profile \
     .bashrc \
     .gitconfig \
