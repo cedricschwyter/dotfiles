@@ -30,6 +30,7 @@ yes | cp -rf .bash_profile \
         $HOME/.local/bin
             mkdir -p $HOME/.config/nvim && cp .config/nvim/* $HOME/.config/nvim
             mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
+            cp .config/picom.conf $HOME/.config/picom.conf
             mkdir -p $HOME/.ctags.d
             ln -s $HOME/.ctags $HOME/.ctags.d/default.ctags
             pip install black isort
