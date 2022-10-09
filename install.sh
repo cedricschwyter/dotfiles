@@ -18,7 +18,6 @@ mkdir -p $HOME/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 yes | cp -rf .bash_profile \
     .bashrc \
-    .gitconfig \
     .oh-my-zsh \
     .tmux.conf \
     .zshrc \
@@ -35,6 +34,11 @@ yes | cp -rf .bash_profile \
             pip install black isort
             mkdir -p ~/.config/ulauncher/user-themes && git clone https://github.com/sudosubin/one-dark-ulauncher.git ~/.config/ulauncher/user-themes/one-dark-ulauncher
 
-            if [ ! -f .no-picom ]; then
+            if [ -f .d3psi-desktop ]; then
                 cp .config/picom.conf $HOME/.config/picom.conf
+                cp .gitconfig $HOME/.gitconfig
+            fi
+
+            if [ -f .d3psi-xps ]; then
+                cp .gitconfig $HOME/.gitconfig
             fi
