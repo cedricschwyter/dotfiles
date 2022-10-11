@@ -29,6 +29,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'rust-lang/rust.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 
 " required
