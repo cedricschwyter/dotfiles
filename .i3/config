@@ -8,8 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
-default_floating_border pixel 1
+default_border none
+default_floating_border none
 
 # Hide borders
 hide_edge_borders none
@@ -73,8 +73,8 @@ bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 # Start Applications
 bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
-bindsym $mod+F2 exec vivaldi-stable
-bindsym $mod+Shift+F2 exec qutebrowser
+bindsym $mod+Shift+F2 exec vivaldi-stable
+bindsym $mod+F2 exec qutebrowser
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec alacritty -e "iranger"
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -436,3 +436,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+for_window [class="^.*"] border pixel 1
+
