@@ -367,6 +367,7 @@ bar {
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
+exec --no-startup-id bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
