@@ -77,7 +77,7 @@ bindsym $mod+Shift+F2 exec vivaldi-stable
 bindsym $mod+F2 exec qutebrowser
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec alacritty -e "iranger"
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+Shift+F3 exec thunar
 bindsym $mod+F5 exec alacritty -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b --blur-background
