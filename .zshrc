@@ -116,12 +116,6 @@ if [ -f $HOME/.zshrc.local ]; then
 fi
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export JAVA8="JAVA_HOME=/usr/lib/jvm/java-8-openjdk/"
-export JAVA11="JAVA_HOME=/usr/lib/jvm/java-11-openjdk/"
-
-function run_eclim {
-    eval $JAVA11 $ECLIMD
-}
 
 function transcode {
     ffmpeg -i $1 -vcodec libx265 -crf 20 -f mp4 $1.tmp && mv $1.tmp $1
@@ -135,6 +129,4 @@ function transcode_all {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "/home/d3psi/.ghcup/env" ] && source "/home/d3psi/.ghcup/env" # ghcup-env
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
