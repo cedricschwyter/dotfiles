@@ -76,7 +76,7 @@ bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
 bindsym $mod+Shift+F2 exec vivaldi-stable
 bindsym $mod+F2 exec qutebrowser
 #bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec alacritty -e "iranger"
+bindsym $mod+F3 exec alacritty -e "$HOME/.local/bin/iranger"
 bindsym $mod+Shift+F3 exec thunar
 bindsym $mod+F5 exec alacritty -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
