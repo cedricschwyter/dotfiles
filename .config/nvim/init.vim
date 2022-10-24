@@ -29,6 +29,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'rust-lang/rust.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'AGhost-7/critiq.vim'
 call plug#end()
 
 " required
