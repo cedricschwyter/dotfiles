@@ -33,6 +33,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'AGhost-7/critiq.vim'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
 call plug#end()
 
 " required
@@ -141,6 +143,9 @@ nnoremap <Leader>o :.GBrowse<CR>
 " autocommands and further config
 au BufWrite * :Autoformat
 autocmd FileType yaml let b:autoformat_autoindent=0
+augroup autoformat_settings
+    autocmd FileType java AutoFormatBuffer google-java-format
+augroup END
 
 " lsp
 function! s:on_lsp_buffer_enabled() abort
