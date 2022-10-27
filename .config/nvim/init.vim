@@ -35,7 +35,12 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'AGhost-7/critiq.vim'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 call plug#end()
+
+" formatters config
+call glaive#Install()
+Glaive codefmt google_java_executable="/usr/bin/google-java-format --aosp"
 
 " required
 filetype plugin indent on
@@ -141,8 +146,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.GBrowse<CR>
 
 " autocommands and further config
-au BufWrite * :Autoformat
-autocmd FileType yaml let b:autoformat_autoindent=0
 augroup autoformat_settings
     autocmd FileType java AutoFormatBuffer google-java-format
 augroup END
