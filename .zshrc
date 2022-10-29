@@ -129,4 +129,4 @@ function transcode_all {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "/home/d3psi/.ghcup/env" ] && source "/home/d3psi/.ghcup/env" # ghcup-env
 
-source /usr/share/nvm/init-nvm.sh
+[ -f "/usr/share/nvm/init-nvm.sh" ] && source /usr/share/nvm/init-nvm.sh
