@@ -96,6 +96,7 @@ set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
 set mouse=a
+set guicursor=n-v-c-sm:block
 
 " keybinds
 let mapleader=','
