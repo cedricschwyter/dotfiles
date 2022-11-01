@@ -150,6 +150,7 @@ nnoremap <Leader>o :.GBrowse<CR>
 augroup autoformat_settings
     autocmd FileType java AutoFormatBuffer google-java-format
     autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+    autocmd FileType javascript,typescript AutoFormatBuffer clang-format
 augroup END
 
 " lsp
