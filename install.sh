@@ -25,10 +25,11 @@ yes | cp -rf .bash_profile \
     .gdbinit \
     .alacritty.yml \
     $HOME
-    yes | cp -rf scripts/* \
-        $HOME/.local/bin
 
-    cp scripts/iranger $HOME/.local/bin
+mkdir $HOME/.local/bin
+    yes | cp -rf scripts/* \
+        $HOME/.local/bin/
+
     mkdir -p $HOME/.config/nvim && cp .config/nvim/* $HOME/.config/nvim
     mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
     mkdir -p $HOME/.ctags.d
