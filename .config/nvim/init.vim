@@ -36,6 +36,9 @@ Plug 'AGhost-7/critiq.vim'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'eagletmt/neco-ghc'
+Plug 'dag/vim2hs'
+Plug 'pbrisbin/vim-syntax-shakespeare'
 call plug#end()
 
 " formatters config
