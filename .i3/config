@@ -45,6 +45,7 @@ bindsym $mod+g exec text-scratchpad
 
 exec --no-startup-id "$HOME/.screenlayout/default.sh"
 exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id autorandr -c
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
