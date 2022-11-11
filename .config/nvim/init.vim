@@ -39,6 +39,7 @@ Plug 'google/vim-glaive'
 Plug 'eagletmt/neco-ghc'
 Plug 'dag/vim2hs'
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " formatters config
@@ -153,8 +154,9 @@ nnoremap <Leader>o :.GBrowse<CR>
 augroup autoformat_settings
     autocmd FileType java AutoFormatBuffer clang-format
     autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-    autocmd FileType javascript,typescript AutoFormatBuffer clang-format
 augroup END
+au BufWrite * :Autoformat
+autocmd FileType yaml let b:autoformat_autoindent=0
 
 " lsp
 function! s:on_lsp_buffer_enabled() abort
