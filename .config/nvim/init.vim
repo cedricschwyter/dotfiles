@@ -39,7 +39,6 @@ Plug 'google/vim-glaive'
 Plug 'eagletmt/neco-ghc'
 Plug 'dag/vim2hs'
 Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 " formatters config
