@@ -248,3 +248,7 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == ''
 
 " rust.vim
 let g:rustfmt_autosave = 1
+
+" clipboard
+set clipboard+=unnamedplus
+
