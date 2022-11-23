@@ -13,3 +13,5 @@
     gpgsign = true
 [init]
     defaultBranch = master
+[push]
+	autoSetupRemote = true
