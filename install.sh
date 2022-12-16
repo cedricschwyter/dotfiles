@@ -27,24 +27,26 @@ yes | cp -rf .bash_profile \
     $HOME
 
 mkdir $HOME/.local/bin
-    yes | cp -rf scripts/* \
-        $HOME/.local/bin/
+yes | cp -rf scripts/* \
+    $HOME/.local/bin/
 
-    mkdir -p $HOME/.config/nvim && cp .config/nvim/* $HOME/.config/nvim
-    mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
-    mkdir -p $HOME/.ctags.d
-    ln -s $HOME/.ctags $HOME/.ctags.d/default.ctags
-    pip install black isort
-    mkdir -p ~/.config/ulauncher/user-themes && git clone https://github.com/sudosubin/one-dark-ulauncher.git ~/.config/ulauncher/user-themes/one-dark-ulauncher
+mkdir -p $HOME/.config/nvim && cp .config/nvim/* $HOME/.config/nvim
+mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
+mkdir -p $HOME/.ctags.d
+ln -s $HOME/.ctags $HOME/.ctags.d/default.ctags
+pip install black isort
+mkdir -p ~/.config/ulauncher/user-themes && git clone https://github.com/sudosubin/one-dark-ulauncher.git ~/.config/ulauncher/user-themes/one-dark-ulauncher
 
-    if [ -f .d3psi-desktop ]; then
-        cp .config/picom.conf $HOME/.config/picom.conf
-        cp .gitconfig $HOME/.gitconfig
-    fi
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-    if [ -f .d3psi-xps ]; then
-        cp .gitconfig $HOME/.gitconfig
-    fi
+if [ -f .d3psi-desktop ]; then
+    cp .config/picom.conf $HOME/.config/picom.conf
+    cp .gitconfig $HOME/.gitconfig
+    cp .alacritty.yml-desktop $HOME/.alacritty.yml
+fi
 
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+if [ -f .d3psi-xps ]; then
+    cp .gitconfig $HOME/.gitconfig
+fi
+
