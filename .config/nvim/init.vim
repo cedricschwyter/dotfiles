@@ -156,6 +156,7 @@ augroup autoformat_settings
 augroup END
 au BufWrite * :Autoformat
 autocmd FileType yaml let b:autoformat_autoindent=0
+autocmd FileType markdown let b:autoformat_autoindent=0
 autocmd FileType gitcommit let b:autoformat_autoindent=0
 
 " lsp
