@@ -151,7 +151,7 @@ nnoremap <Leader>o :.GBrowse<CR>
 
 " autocommands and further config
 augroup autoformat_settings
-    autocmd FileType java AutoFormatBuffer clang-format
+    autocmd FileType java,c,cpp AutoFormatBuffer clang-format
     autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
 augroup END
 au BufWrite * :Autoformat
