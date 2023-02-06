@@ -41,7 +41,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 # scratchpad
 for_window [class=alacritty instance="__text_scratchpad"] floating enable
-bindsym $mod+g exec text-scratchpad
+bindsym $mod+g exec /home/d3psi/.local/bin/text-scratchpad
 
 exec --no-startup-id "$HOME/.screenlayout/default.sh"
 exec --no-startup-id gnome-settings-daemon
