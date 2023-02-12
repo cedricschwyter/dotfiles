@@ -32,6 +32,7 @@ yes | cp -rf scripts/* \
 
 mkdir -p $HOME/.config/nvim && cp .config/nvim/* $HOME/.config/nvim
 mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
+mkdir -p $HOME/.config/qutebrowser && cp -r .config/qutebrowser/* $HOME/.config/qutebrowser
 mkdir -p $HOME/.ctags.d
 ln -s $HOME/.ctags $HOME/.ctags.d/default.ctags
 pip install black isort
@@ -49,4 +50,3 @@ fi
 if [ -f .d3psi-xps ]; then
     cp .gitconfig $HOME/.gitconfig
 fi
-
