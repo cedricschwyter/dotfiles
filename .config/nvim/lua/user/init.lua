@@ -1,3 +1,5 @@
+vim.o.guicursor = 'n-v-c-sm:block'
+
 return {
   plugins = {
     heirline = function(config)
