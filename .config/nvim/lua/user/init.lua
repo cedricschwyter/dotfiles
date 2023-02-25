@@ -2,6 +2,16 @@ vim.o.guicursor = 'n-v-c-sm:block'
 
 return {
   plugins = {
+    ["neo-tree"] = function(config)
+      config = {
+        filesystem = {
+          filtered_items = {
+            visible = true,
+          }
+        }
+      }
+      return config
+    end,
     heirline = function(config)
       -- the first element of the default configuration table is the statusline
       config[1] = {
