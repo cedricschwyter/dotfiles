@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
         'L3MON4D3/LuaSnip',
         'rafamadriz/friendly-snippets'
     }
+    use 'sindrets/diffview.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
