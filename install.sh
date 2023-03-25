@@ -30,10 +30,9 @@ mkdir $HOME/.local/bin
 yes | cp -rf scripts/* \
     $HOME/.local/bin/
 
+rm -rf $HOME/.config/nvim
 mkdir -p $HOME/.config/nvim 
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim +PackerSync
-cp -r .config/nvim/lua/user $HOME/.config/nvim/lua
+cp -r .config/nvim/* $HOME/.config/nvim/
 mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
 mkdir -p $HOME/.config/qutebrowser && cp -r .config/qutebrowser/* $HOME/.config/qutebrowser
 mkdir -p $HOME/.ctags.d
