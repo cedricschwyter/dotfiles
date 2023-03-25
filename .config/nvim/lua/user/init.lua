@@ -2,6 +2,7 @@ vim.o.guicursor = 'n-v-c-sm:block'
 
 return {
   plugins = {
+    "sindrets/diffview.nvim",
     ["neo-tree"] = function(config)
       config = {
         filesystem = {
