@@ -31,6 +31,15 @@ return require('packer').startup(function(use)
     use 'xiyaowong/transparent.nvim'
     use 'windwp/nvim-autopairs'
     use 'akinsho/toggleterm.nvim'
+    use {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'saadparwaiz1/cmp_luasnip',
+        'hrsh7th/cmp-nvim-lsp',
+        'L3MON4D3/LuaSnip',
+        'rafamadriz/friendly-snippets'
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
