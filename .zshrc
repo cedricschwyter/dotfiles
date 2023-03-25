@@ -130,3 +130,5 @@ function transcode_all {
 [ -f "/home/d3psi/.ghcup/env" ] && source "/home/d3psi/.ghcup/env" # ghcup-env
 
 [ -f "/usr/share/nvm/init-nvm.sh" ] && source /usr/share/nvm/init-nvm.sh
+
+export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
