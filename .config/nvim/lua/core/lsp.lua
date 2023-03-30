@@ -42,8 +42,6 @@ require('lspconfig').jdtls.setup({
     }
 })
 
-require('lspconfig').rust_analyzer.setup({})
-
 require('lspconfig').clangd.setup({})
 
 require('lspconfig').cmake.setup({})

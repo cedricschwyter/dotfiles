@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
         'akinsho/flutter-tools.nvim',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use 'simrat39/rust-tools.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
