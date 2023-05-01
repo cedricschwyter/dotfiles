@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'simrat39/rust-tools.nvim'
+    use 'terrortylor/nvim-comment'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
