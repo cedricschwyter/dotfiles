@@ -93,7 +93,7 @@ window:
   # Scrolling distance multiplier.
   #multiplier: 3
 
-# Font configuration
+  # Font configuration
 font:
   # Normal (roman) font face
   #normal:
@@ -134,7 +134,7 @@ font:
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
   # Point size
-  size: 18.0
+  size: 24.0
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -746,7 +746,7 @@ font:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
-# Colors (Terminal.app)
+  # Colors (Terminal.app)
 colors:
   # Normal colors
   normal:
