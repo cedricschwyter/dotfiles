@@ -80,8 +80,8 @@ bindsym $mod+F2 exec qutebrowser
 bindsym $mod+F3 exec alacritty -e "$HOME/.local/bin/iranger"
 bindsym $mod+Shift+F3 exec thunar
 bindsym $mod+F5 exec alacritty -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b --blur-background
+bindsym $mod+t exec --no-startup-id "pkill picom; yq '.window.opacity = 0.0' $HOME/.alacritty.yml -iy"
+bindsym $mod+Ctrl+t exec --no-startup-id "picom -b --blur-background;  yq '.window.opacity = 0.75' $HOME/.alacritty.yml -iy"
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
