@@ -31,16 +31,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = on_attach
 })
 
-require('lspconfig').lua_ls.setup({
-    single_file_support = true
-})
-
 require("mason-lspconfig").setup_handlers({
     -- This is a default handler that will be called for each installed server (also for new servers that are installed during a session)
     function(server_name)
         require("lspconfig")[server_name].setup {}
     end,
     -- You can also override the default handler for specific servers by providing them as keys, like so:
+    ["lua_ls"] = function()
+        require('lspconfig').lua_ls.setup({
+            single_file_support = true
+        })
+    end,
     ["jdtls"] = function()
         local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
         require("lspconfig").jdtls.setup({
