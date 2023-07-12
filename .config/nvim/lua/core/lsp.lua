@@ -35,71 +35,18 @@ require('lspconfig').lua_ls.setup({
     single_file_support = true
 })
 
-local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
-require('lspconfig').jdtls.setup({
-    init_options = {
-        jvm_args = '-javaagent:' .. install_path .. '/lombok.jar'
-    }
+require("mason-lspconfig").setup_handlers({
+    -- This is a default handler that will be called for each installed server (also for new servers that are installed during a session)
+    function(server_name)
+        require("lspconfig")[server_name].setup {}
+    end,
+    -- You can also override the default handler for specific servers by providing them as keys, like so:
+    ["jdtls"] = function()
+        local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
+        require("lspconfig").jdtls.setup({
+            init_options = {
+                jvm_args = '-javaagent:' .. install_path .. '/lombok.jar'
+            }
+        })
+    end
 })
-
-require('lspconfig').clangd.setup({})
-
-require('lspconfig').cmake.setup({})
-
-require('lspconfig').ansiblels.setup({})
-
-require('lspconfig').asm_lsp.setup({})
-
-require('lspconfig').bashls.setup({})
-
-require('lspconfig').cssls.setup({})
-
-require('lspconfig').dockerls.setup({})
-
-require('lspconfig').docker_compose_language_service.setup({})
-
-require('lspconfig').gopls.setup({})
-
-require('lspconfig').gradle_ls.setup({})
-
-require('lspconfig').graphql.setup({})
-
-require('lspconfig').groovyls.setup({})
-
-require('lspconfig').html.setup({})
-
-require('lspconfig').hls.setup({})
-
-require('lspconfig').jsonls.setup({})
-
-require('lspconfig').kotlin_language_server.setup({})
-
-require('lspconfig').ltex.setup({})
-
-require('lspconfig').marksman.setup({})
-
-require('lspconfig').opencl_ls.setup({})
-
-require('lspconfig').perlnavigator.setup({})
-
-require('lspconfig').pylsp.setup({})
-
-require('lspconfig').sqlls.setup({})
-
-require('lspconfig').svelte.setup({})
-
-require('lspconfig').taplo.setup({})
-
-require('lspconfig').tailwindcss.setup({})
-
-require('lspconfig').tsserver.setup({})
-
-require('lspconfig').terraformls.setup({})
-
-require('lspconfig').vuels.setup({})
-
-require('lspconfig').lemminx.setup({})
-
-require('lspconfig').yamlls.setup({})
-
-require('lspconfig').zls.setup({})
