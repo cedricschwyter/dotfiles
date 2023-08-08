@@ -55,7 +55,7 @@ exec --no-startup-id autorandr -c
 #bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
 exec --no-startup-id gkraken --hide-window
 exec --no-startup-id easyeffects --gapplication-service
-exec --no-startup-id qbittorrent
+exec --no-startup-id transmission-gtk --minimized
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
