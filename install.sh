@@ -37,7 +37,7 @@ mkdir -p $HOME/.config/dunst && cp .config/dunst/dunstrc $HOME/.config/dunst
 mkdir -p $HOME/.config/qutebrowser && cp -r .config/qutebrowser/* $HOME/.config/qutebrowser
 mkdir -p $HOME/.ctags.d
 ln -s $HOME/.ctags $HOME/.ctags.d/default.ctags
-pip install black isort
+yay -S python-black python-isort
 mkdir -p ~/.config/ulauncher/user-themes && git clone https://github.com/sudosubin/one-dark-ulauncher.git ~/.config/ulauncher/user-themes/one-dark-ulauncher
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
