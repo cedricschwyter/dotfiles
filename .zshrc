@@ -116,6 +116,7 @@ if [ -f $HOME/.zshrc.local ]; then
 fi
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 function transcode {
     ffmpeg -i $1 -vcodec libx265 -crf 20 -f mp4 $1.tmp && mv $1.tmp $1
