@@ -27,7 +27,7 @@ yes | cp -rf .bash_profile \
     .p10k.zsh \
     $HOME
 
-mkdir $HOME/.local/bin
+mkdir -p $HOME/.local/bin
 yes | cp -rf scripts/* \
     $HOME/.local/bin/
 
