@@ -24,6 +24,7 @@ yes | cp -rf .bash_profile \
     .i3 \
     .gdbinit \
     .alacritty.yml \
+    .p10k.zsh \
     $HOME
 
 mkdir $HOME/.local/bin
