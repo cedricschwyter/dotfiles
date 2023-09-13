@@ -26,8 +26,10 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# start a alacritty
+# start alacritty
 bindsym $mod+Return exec alacritty
+
+bindsym $mod+Shift+Return exec thunderbird -compose
 
 # kill focused window
 bindsym $mod+Shift+q kill
