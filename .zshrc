@@ -126,6 +126,10 @@ function transcode_all {
     find $1 -type f \( -name "*.mp4" \) -exec bash -c "[ ! -f {}.finished ] && ffmpeg -i {} -vcodec libx265 -crf 20 -f mp4 {}.tmp && mv {}.tmp {} && touch {}.finished" \;
 }
 
+function dev {
+    ssh -t 78.47.96.216 './temporary-dev-env.sh'
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
