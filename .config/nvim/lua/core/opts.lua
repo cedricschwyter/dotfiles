@@ -10,5 +10,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
+vim.opt.shell = "/bin/zsh"
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
