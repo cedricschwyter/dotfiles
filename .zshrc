@@ -130,6 +130,12 @@ function dev {
     ssh -t 78.47.96.216 './temporary-dev-env.sh'
 }
 
+function obligate_tunnels {
+    ssh -fN -L 8080:78.47.96.216:8080 d3psi@78.47.96.216
+    ssh -fN -L 8081:78.47.96.216:8081 d3psi@78.47.96.216
+    ssh -fN -L 8082:78.47.96.216:8082 d3psi@78.47.96.216
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
