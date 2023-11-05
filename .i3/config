@@ -64,8 +64,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "$HOME/.i3/bright +; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "$HOME/.i3/bright -; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
