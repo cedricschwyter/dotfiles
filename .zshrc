@@ -136,6 +136,19 @@ function obligate_tunnels {
     ssh -fN -L 8082:78.47.96.216:8082 d3psi@78.47.96.216
 }
 
+function setup_remotes {
+    local slug
+    if [[ -z "$1" ]]; then
+        slug=$(git remote get-url origin | cut -c20- | sed 's/.git//')
+    else
+        slug=$1
+    fi
+    echo "Using $slug..."
+    git remote add gitlab "https://git.schwyter.io/$slug.git/"
+    git remote add all "https://github.com/$slug.git/"
+    git remote set-url --add all "https://git.schwyter.io/$slug.git/"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
