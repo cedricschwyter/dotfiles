@@ -127,7 +127,7 @@ function transcode_all {
 }
 
 function dev {
-    ssh -t 78.47.96.216 './temporary-dev-env.sh'
+    ssh -t d3psi@78.47.96.216 './temporary-dev-env.sh'
 }
 
 function obligate_tunnels {
