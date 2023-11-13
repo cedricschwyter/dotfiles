@@ -1,0 +1,8 @@
+#!/bin/bash
+env_id=$(docker run \
+	-dit \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	-v /home/d3psi/.git-credentials:/home/d3psi/.git-credentials \
+	-v /home/d3psi/.gitconfig:/home/d3psi/.gitconfig \
+	-v /home/d3psi/.gnupg:/home/d3psi/.gnupg development:latest zsh)
+docker exec -it "${env_id}" zsh
