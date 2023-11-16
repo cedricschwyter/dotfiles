@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo "<env_name> positional argument must be present."
+    exit 1
+fi
+ssh -t d3psi@78.47.96.216 "$HOME/bin/kill-local-dev $1"

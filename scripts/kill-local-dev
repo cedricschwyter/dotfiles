@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo "<env_name> positional argument must be present."
+    exit 1
+fi
+
+env_name=$1
+env_id=$(docker ps -aqf "name=^${env_name}$")
+if [ ! -z "${env_id}" ]; then
+    docker rm -f "${env_id}"
+fi

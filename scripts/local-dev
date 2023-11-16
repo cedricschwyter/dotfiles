@@ -1,8 +1,18 @@
 #!/bin/bash
-env_id=$(docker run \
-	-dit \
-	-v /var/run/docker.sock:/var/run/docker.sock \
-	-v /home/d3psi/.git-credentials:/home/d3psi/.git-credentials \
-	-v /home/d3psi/.gitconfig:/home/d3psi/.gitconfig \
-	-v /home/d3psi/.gnupg:/home/d3psi/.gnupg development:latest zsh)
+if [ -z "$1" ]; then
+    echo "<env_name> positional argument must be present."
+    exit 1
+fi
+env_name=$1
+env_id=$(docker ps -aqf "name=^${env_name}$")
+if [ -z "${env_id}" ]; then
+    env_id=$(docker run \
+        -dit \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /home/d3psi/.git-credentials:/home/d3psi/.git-credentials \
+        -v /home/d3psi/.gitconfig:/home/d3psi/.gitconfig \
+        -v /home/d3psi/.gnupg:/home/d3psi/.gnupg \
+        --name "${env_name}" \
+        development:latest zsh)
+fi
 docker exec -it "${env_id}" zsh

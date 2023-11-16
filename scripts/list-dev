@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh d3psi@78.47.96.216 "$HOME/bin/list-local-dev"

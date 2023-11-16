@@ -126,17 +126,10 @@ function transcode_all {
     find $1 -type f \( -name "*.mp4" \) -exec bash -c "[ ! -f {}.finished ] && ffmpeg -i {} -vcodec libx265 -crf 20 -f mp4 {}.tmp && mv {}.tmp {} && touch {}.finished" \;
 }
 
-function dev {
-    ssh -t d3psi@78.47.96.216 './temporary-dev-env.sh'
-}
-
 function obligate_tunnels {
     ssh -fN -L 8080:78.47.96.216:8080 d3psi@78.47.96.216
     ssh -fN -L 8081:78.47.96.216:8081 d3psi@78.47.96.216
     ssh -fN -L 8082:78.47.96.216:8082 d3psi@78.47.96.216
-    ssh -fN -L 5433:78.47.96.216:5433 d3psi@78.47.96.216
-    ssh -fN -L 5434:78.47.96.216:5434 d3psi@78.47.96.216
-}
 
 function setup_remotes {
     local slug
