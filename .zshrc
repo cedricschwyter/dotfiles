@@ -130,6 +130,8 @@ function obligate_tunnels {
     ssh -fN -L 8080:78.47.96.216:8080 d3psi@78.47.96.216
     ssh -fN -L 8081:78.47.96.216:8081 d3psi@78.47.96.216
     ssh -fN -L 8082:78.47.96.216:8082 d3psi@78.47.96.216
+    ssh -fN -L 5433:78.47.96.216:5433 d3psi@78.47.96.216
+    ssh -fN -L 5434:78.47.96.216:5434 d3psi@78.47.96.216
 }
 
 function setup_remotes {
