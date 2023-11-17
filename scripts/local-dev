@@ -10,6 +10,7 @@ if [ -z "${env_id}" ]; then
     docker pull ghcr.io/d3psi/dockers/development:master
     env_id=$(docker run \
         -dit \
+        -e GH_TOKEN="${GH_TOKEN}" \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -v /home/d3psi/.git-credentials:/home/d3psi/.git-credentials \
         -v /home/d3psi/.gitconfig:/home/d3psi/.gitconfig \
