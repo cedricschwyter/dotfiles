@@ -10,7 +10,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 telescope.setup({
     defaults = {
-        file_ignore_patterns = { "vendor" },
+        file_ignore_patterns = { "vendor", "node_modules", "target", "dist" },
         mappings = {
             i = {
                 ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
