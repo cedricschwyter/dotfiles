@@ -18,3 +18,5 @@
 [rerere]
 	enabled = 1
 	autoupdate = true
+[log]
+    showSignature = true
