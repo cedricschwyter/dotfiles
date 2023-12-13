@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 tmp_file=$(mktemp)
 source $HOME/.zshrc
