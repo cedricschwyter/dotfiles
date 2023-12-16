@@ -59,6 +59,7 @@ exec --no-startup-id gkraken --hide-window
 exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id transmission-gtk --minimized
 exec --no-startup-id protonmail-bridge --noninteractive
+exec --no-startup-id discord
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
