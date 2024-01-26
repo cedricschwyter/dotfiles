@@ -47,7 +47,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 if [ -f .d3psi-desktop ]; then
     cp .config/picom.conf $HOME/.config/picom.conf
     cp .gitconfig $HOME/.gitconfig
-    cp .alacritty.yml-desktop $HOME/.alacritty.yml
+    cp .alacritty-desktop.toml $HOME/.alacritty.toml
 fi
 
 if [ -f .d3psi-xps ]; then
