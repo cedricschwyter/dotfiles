@@ -20,3 +20,6 @@
 	autoupdate = true
 [log]
     showSignature = true
+[core]
+    untrackedcache = true
+    fsmonitor = true
