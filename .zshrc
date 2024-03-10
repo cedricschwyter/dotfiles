@@ -168,6 +168,3 @@ export PATH=$PATH:$HOME/.local/bin
 export BROWSER="/usr/bin/qutebrowser"
 
 export JAVA_HOME=/usr/lib/jvm/default/ 
-
-[[ -s "$HOME/.zprofile" ]] && source "$HOME/.zprofile"
-
