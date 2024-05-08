@@ -20,7 +20,13 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { "nvim-telescope/telescope-live-grep-args.nvim" },
+        },
+        config = function()
+            require("telescope").load_extension("live_grep_args")
+        end
     }
     use {
         'williamboman/mason.nvim',
@@ -49,7 +55,7 @@ return require('packer').startup(function(use)
     use 'terrortylor/nvim-comment'
     use 'APZelos/blamer.nvim'
     use 'mhartington/formatter.nvim'
-    use { 'iamcco/markdown-preview.nvim', 
+    use { 'iamcco/markdown-preview.nvim',
         run = function() vim.fn["mkdp#util#install"]() end,
     }
 
