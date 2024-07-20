@@ -1,2 +1,5 @@
 #!/bin/bash
+if [ ! -z "$1" ]; then
+    adb shell am start -a android.intent.action.CALL -d "$1"
+fi
 scrcpy -S --shortcut-mod ralt
