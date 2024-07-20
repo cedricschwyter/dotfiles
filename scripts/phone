@@ -1,0 +1,2 @@
+#!/bin/bash
+scrcpy -S --shortcut-mod ralt
