@@ -48,6 +48,7 @@ bindsym $mod+g exec /home/d3psi/.local/bin/text-scratchpad
 # phone
 for_window [class=scrcpy] floating enable
 bindsym $mod+c exec "$HOME/.local/bin/phone"
+bindsym $mod+x exec "$HOME/.local/bin/phone-end-call"
 
 exec --no-startup-id "$HOME/.screenlayout/default.sh"
 exec --no-startup-id gnome-settings-daemon

@@ -1,5 +1,11 @@
 #!/bin/bash
 if [ ! -z "$1" ]; then
-    adb shell am start -a android.intent.action.CALL -d "$1"
+    adb shell am start -a android.intent.action.DIAL -d "$1"
 fi
-scrcpy -S --shortcut-mod ralt
+
+if [[ $(ps aux | grep "scrcpy" | grep -v grep) ]]; then
+    exit
+fi
+
+scrcpy -S --shortcut-mod ralt --power-off-on-close
+

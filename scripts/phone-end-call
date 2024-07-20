@@ -1,0 +1,5 @@
+#!/bin/bash
+adb shell input keyevent KEYCODE_ENDCALL
+pkill scrcpy --sig SIGTERM
+adb shell input keyevent POWER
+pkill phone --sig SIGTERM
