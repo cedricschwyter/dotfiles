@@ -1,4 +1,14 @@
 #!/bin/bash
+. $HOME/.zshrc.local
+
+adb shell input keyevent 26
+sleep 5
+adb shell input swipe 300 1000 300 500
+sleep 5
+adb shell input text "${PHONE_PIN}"
+sleep 1
+adb shell input keyevent 66
+
 if [ ! -z "$1" ]; then
     adb shell am start -a android.intent.action.DIAL -d "$1"
 fi
