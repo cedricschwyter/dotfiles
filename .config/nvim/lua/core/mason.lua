@@ -2,7 +2,7 @@ require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls', 'jdtls', 'rust_analyzer', 'clangd', 'cmake', 'ansiblels', 'asm_lsp', 'bashls',
         'cssls', 'dockerls', 'docker_compose_language_service', 'gopls', 'gradle_ls', 'graphql', 'groovyls', 'html',
-        'hls', 'jsonls', 'kotlin_language_server', 'ltex', 'marksman', 'opencl_ls', 'spectral', 'perlnavigator', 'pylsp',
+        'hls', 'jsonls', 'kotlin_language_server', 'marksman', 'opencl_ls', 'spectral', 'perlnavigator', 'pylsp',
         'svelte', 'taplo', 'tailwindcss', 'terraformls', 'vuels', 'lemminx', 'yamlls', 'zls' }
 })
 

@@ -1,4 +1,4 @@
-import = ["~/.alacritty-colorscheme/themes/blood_moon.yaml"]
+general.import = ["~/.alacritty-colorscheme/themes/blood_moon.yaml"]
 
 [colors.bright]
 black = "#575b70"
