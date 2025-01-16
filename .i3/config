@@ -29,7 +29,7 @@ floating_modifier $mod
 # start alacritty
 bindsym $mod+Return exec alacritty
 
-bindsym $mod+Shift+Return exec thunderbird -compose
+bindsym $mod+Shift+Return exec aerc :compose
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -450,3 +450,4 @@ mode "$mode_gaps_outer" {
 for_window [class="^.*"] border pixel 1
 
 for_window [class="aerc"] focus_on_window_activation none
+for_window [class="aerc"] focus none
