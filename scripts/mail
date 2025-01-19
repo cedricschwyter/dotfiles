@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source /home/d3psi/.zshrc
+
+url=$(echo $1 | python3 -c "import urllib.parse; import sys; print(urllib.parse.unquote(sys.stdin.read()))")
+
+alacritty --hold --working-directory "/home/d3psi" -e /bin/zsh -c "source .zshrc && aerc -I $url"
