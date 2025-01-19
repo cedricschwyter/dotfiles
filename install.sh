@@ -55,5 +55,6 @@ if [ -f .d3psi-xps ]; then
 fi
 
 sudo cp usgermanumlaut /usr/share/X11/xkb/symbols/
+cp -r .config/aerc/* $HOME/.config/aerc/
 
 echo "Finished install of config files"
