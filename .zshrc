@@ -156,7 +156,6 @@ function setup_remotes {
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 
 alias vim=nvim
-alias btop="btop --utf-force"
 alias tmux="tmux -u"
 
 export GPG_TTY=$(tty)
