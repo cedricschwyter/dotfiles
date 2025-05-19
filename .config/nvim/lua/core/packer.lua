@@ -31,6 +31,8 @@ return require('packer').startup(function(use)
     use {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
+        'williamboman/mason-null-ls.nvim',
+        'nvimtools/none-ls.nvim',
         'neovim/nvim-lspconfig',
     }
     use 'lewis6991/gitsigns.nvim'

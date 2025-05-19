@@ -1,10 +1,14 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls', 'jdtls', 'rust_analyzer', 'clangd', 'cmake', 'ansiblels', 'asm_lsp', 'bashls',
-        'cssls', 'dockerls', 'docker_compose_language_service', 'gopls', 'gradle_ls', 'graphql', 'groovyls', 'html',
-        'hls', 'jsonls', 'kotlin_language_server', 'marksman', 'opencl_ls', 'spectral', 'perlnavigator', 'pylsp',
-        'svelte', 'taplo', 'tailwindcss', 'terraformls', 'vuels', 'lemminx', 'yamlls', 'zls' },
+        'cssls', 'dockerls', 'docker_compose_language_service', 'eslint', 'gopls', 'gradle_ls', 'graphql', 'groovyls',
+        'html', 'hls', 'jsonls', 'kotlin_language_server', 'marksman', 'opencl_ls', 'spectral', 'perlnavigator', 'pylsp',
+        'svelte', 'taplo', 'tailwindcss', 'terraformls', 'vuels', 'lemminx', 'yamlls', 'zls', 'ruby_lsp' },
     automatic_enable = true
+})
+require('null-ls').setup()
+require('mason-null-ls').setup({
+    automatic_setup = true
 })
 
 local lsp_defaults = require('lspconfig').util.default_config
