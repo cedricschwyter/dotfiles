@@ -3,7 +3,8 @@ require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls', 'jdtls', 'rust_analyzer', 'clangd', 'cmake', 'ansiblels', 'asm_lsp', 'bashls',
         'cssls', 'dockerls', 'docker_compose_language_service', 'gopls', 'gradle_ls', 'graphql', 'groovyls', 'html',
         'hls', 'jsonls', 'kotlin_language_server', 'marksman', 'opencl_ls', 'spectral', 'perlnavigator', 'pylsp',
-        'svelte', 'taplo', 'tailwindcss', 'terraformls', 'vuels', 'lemminx', 'yamlls', 'zls' }
+        'svelte', 'taplo', 'tailwindcss', 'terraformls', 'vuels', 'lemminx', 'yamlls', 'zls' },
+    automatic_enable = true
 })
 
 local lsp_defaults = require('lspconfig').util.default_config
@@ -28,25 +29,4 @@ end
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = on_attach
-})
-
-require("mason-lspconfig").setup_handlers({
-    -- This is a default handler that will be called for each installed server (also for new servers that are installed during a session)
-    function(server_name)
-        require("lspconfig")[server_name].setup {}
-    end,
-    -- You can also override the default handler for specific servers by providing them as keys, like so:
-    ["lua_ls"] = function()
-        require('lspconfig').lua_ls.setup({
-            single_file_support = true
-        })
-    end,
-    ["jdtls"] = function()
-        local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
-        require("lspconfig").jdtls.setup({
-            init_options = {
-                jvm_args = '-javaagent:' .. install_path .. '/lombok.jar'
-            }
-        })
-    end
 })
