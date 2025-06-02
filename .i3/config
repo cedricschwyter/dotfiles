@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start alacritty
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty --working-directory "$HOME" -e /bin/zsh -l
 
 bindsym $mod+Shift+Return exec alacritty --working-directory "$HOME" -e /bin/zsh -c 'source .zshrc && aerc -I :compose'
 
