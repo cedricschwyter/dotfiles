@@ -178,7 +178,4 @@ export GEM_HOME=$HOME/.gem
 [[ ! -r '/home/d3psi/.opam/opam-init/init.zsh' ]] || source '/home/d3psi/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$HOME/.gem/bin:$PATH"
-
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
