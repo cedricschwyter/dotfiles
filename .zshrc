@@ -168,8 +168,6 @@ export BROWSER="/usr/bin/qutebrowser"
 
 export JAVA_HOME=/usr/lib/jvm/default/ 
 
-export GEM_HOME=$HOME/.gem
-
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
 #   - the correct directories to the PATH
