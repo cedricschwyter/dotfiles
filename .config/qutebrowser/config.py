@@ -12,3 +12,8 @@ config.bind('<z><o><l>', 'spawn --userscript qute-pass --otp-only -d dmenu')
 
 config.bind('<Ctrl-Shift-y>',
             'hint links spawn --detach mpv --force-window yes {hint-url}')
+
+config.bind('<Ctrl-e>', 'edit-text')
+
+c.editor.command = ["alacritty", "-e", "nvim",
+                    "{file}", "+startinsert", "+call cursor({line}, {column})"]
