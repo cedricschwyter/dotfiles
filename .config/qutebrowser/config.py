@@ -16,4 +16,4 @@ config.bind('<Ctrl-Shift-y>',
 config.bind('<Ctrl-e>', 'edit-text')
 
 c.editor.command = ["alacritty", "-e", "nvim",
-                    "{file}", "+startinsert", "+call cursor({line}, {column})"]
+                    "{file}", "+startinsert", "+call cursor({line}, {column})", "+set filetype=markdown"]
