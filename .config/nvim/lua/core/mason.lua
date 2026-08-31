@@ -71,12 +71,12 @@ local function filter_out_rvm(result)
 		items = filtered,
 	})
 
-	if #filtered == 1 then
-		local win = vim.api.nvim_get_current_win()
-		local from = { vim.fn.bufnr("%"), vim.fn.line("."), vim.fn.col("."), 0 }
-		local tagname = vim.fn.expand("<cword>")
-		vim.fn.settagstack(win, { items = { { tagname = tagname, from = from } } }, "t")
+	local win = vim.api.nvim_get_current_win()
+	local from = { vim.fn.bufnr("%"), vim.fn.line("."), vim.fn.col("."), 0 }
+	local tagname = vim.fn.expand("<cword>")
+	vim.fn.settagstack(win, { items = { { tagname = tagname, from = from } } }, "t")
 
+	if #filtered == 1 then
 		vim.cmd.cfirst()
 	else
 		vim.cmd.copen()
